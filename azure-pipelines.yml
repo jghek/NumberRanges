@@ -67,7 +67,7 @@ jobs:
       - task: NuGetAuthenticate@1
         displayName: 'NuGet Authenticate'
         inputs:
-          nuGetServiceConnections: NuGet.org Publish Key
+          nuGetServiceConnections: 'NuGet.org Publish Key'
 
       - task: NuGetCommand@2
         displayName: 'NuGet push'
@@ -76,5 +76,5 @@ jobs:
           command: push
           packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
           nuGetFeedType: external
-          publishFeedCredentials: NuGet.org Publish Key
+          publishFeedCredentials: 'NuGet.org Publish Key'
 
