@@ -4,7 +4,7 @@
 A simple library to manage and use integer number ranges like used on a printer: 2-10,12,15-.
 
 ## Prerequisites
-This package targets .NET Standard 2.0, so it should work with most .NET platforms.
+This package targets .NET Standard 2.1, so it should work with most .NET platforms.
 
 ## Installation
 Use NuGet to install the package. Use can use the UI, or use the following command in the package manager console:
