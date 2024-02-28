@@ -2,6 +2,28 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>NumberRanges</Title>
+    <Authors>jghek</Authors>
+    <Company>Qtopia NL</Company>
+    <Description>A simple library to manage and use integer number ranges like used on a printer: 2-10,12,15-.</Description>
+    <Copyright>(c) 2024 by J.G.Hek</Copyright>
+    <PackageProjectUrl>https://github.com/jghek/NumberRanges</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/jghek/NumberRanges</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
