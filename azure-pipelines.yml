@@ -64,17 +64,10 @@ jobs:
           versioningScheme: byBuildNumber
           verbosityPack: 'Normal'
 
-      - task: NuGetAuthenticate@1
-        displayName: 'NuGet Authenticate'
-        inputs:
-          nuGetServiceConnections: NuGetPublishKey
-
       - task: NuGetCommand@2
         displayName: 'NuGet push'
         condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
         inputs:
-          command: push
-          packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-          nuGetFeedType: external
-          publishFeedCredentials: NuGetPublishKey
+          command: custom
+          arguments: push -Source $(Build.ArtifactStagingDirectory)/*.nupkg -ApiKey $(NuGetApiKey)
 
