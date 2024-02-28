@@ -20,12 +20,12 @@ Use visual studio 2022 version 17.8 or later to build this library. The main lib
 This library was created by Jan Geert Hek, a software developer from the Netherlands. You can find more information about me on my [LinkedIn](https://www.linkedin.com/in/jghek/) page.
 
 ## License
-This library is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This library is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 # The manual
 
 ## What is a NumberRange?
-A NumberRange is a range of integers. It uses the notation you may know from specifying pages when printin a document. 
+A NumberRange is a range of integers. It uses the notation you may know from specifying pages when printing a document. 
 It can be a single number, a range of numbers, or a combination of both. The range is defined by a string, like: `2-10,12,15-`. This means any number between 2 and 10, 12, and any number that is 15 or higher.
 
 This library can help you to check if a number is in a range, and to create a range from a string and optimizing it.
