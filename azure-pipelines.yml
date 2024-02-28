@@ -69,5 +69,5 @@ jobs:
         condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
         inputs:
           command: custom
-          arguments: push -Source $(Build.ArtifactStagingDirectory)/*.nupkg -ApiKey $(NuGetApiKey)
+          arguments: push $(Build.ArtifactStagingDirectory)/*.nupkg $(NuGetApiKey)
 
