@@ -88,3 +88,6 @@ range.Optimize();
 range.ToString(); // returns "2-12,15-"
 ```
 
+## Credits
+
+The icon used has been designed by Flaticon.com

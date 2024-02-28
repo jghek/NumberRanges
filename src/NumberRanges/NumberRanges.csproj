@@ -13,10 +13,15 @@
     <RepositoryUrl>https://github.com/jghek/NumberRanges</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>middle-age.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\package\middle-age.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
