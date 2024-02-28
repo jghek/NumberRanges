@@ -166,25 +166,11 @@ namespace NumberRanges
 	public class NumberRange : IRange
 	{
 		/// <summary>
-		/// Create a new NumberRange. The range is empty.
-		/// The Create method is a factory method that can be used to create a new instance of NumberRange. It exaclty the same as using the constructor, but this allow for a more fluent syntax.
+		/// Creates a new empty NumberRange.
+		/// The Create method is a factory method that can be used to create a new instance of NumberRange to use with the fluent api.
 		/// </summary>
-		/// <returns>An instance of NumberRange.</returns>
-		public static NumberRange Create() => new NumberRange();
-
-		/// <summary>
-		/// Create a new NumberRange. The range is a comma separated list of ranges. Each range can be a single number, a range of numbers, or a range of numbers with an open end.
-		/// The Create method is a factory method that can be used to create a new instance of NumberRange. It exaclty the same as using the constructor, but this allow for a more fluent syntax.		/// </summary>
-		/// <param name="range">A range as text, that will be parsed.</param>
-		/// <returns>An instance of NumberRange.</returns>
-		public static NumberRange Create(string range) => new NumberRange(range);
-
-		/// <summary>
-		/// Create a new NumberRange. The range is a list of ranges. Each range can be a single number, a range of numbers, or a range of numbers with an open end.
-		/// The Create method is a factory method that can be used to create a new instance of NumberRange. It exaclty the same as using the constructor, but this allow for a more fluent syntax.		/// </summary>
-		/// <param name="ranges"></param>
-		/// <returns>An instance of NumberRange.</returns>
-		public static NumberRange Create(params string[] ranges) => new NumberRange(ranges);
+		/// <returns>An empty instance of NumberRange.</returns>
+		public static NumberRange Empty => new NumberRange();
 
 		private List<IRange> _range = new List<IRange>();
 

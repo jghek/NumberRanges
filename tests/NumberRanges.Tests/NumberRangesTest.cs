@@ -2,6 +2,7 @@ using FluentAssertions;
 
 namespace NumberRanges.Tests;
 
+
 public class NumberRangesTest
 {
 	[Theory]
@@ -75,7 +76,7 @@ public class NumberRangesTest
 	[InlineData(30, true)]
 	public void Test_Scenario2(int number, bool expected)
 	{
-		var range = NumberRange.Create()
+		var range = NumberRange.Empty
 			.AddLowerThanOrEqual(6)
 			.AddRange(8, 10)
 			.Add(15)
@@ -118,7 +119,7 @@ public class NumberRangesTest
 	[InlineData(30, true)]
 	public void Test_Scenario3(int number, bool expected)
 	{
-		var range = NumberRange.Create()
+		var range = NumberRange.Empty
 			.Add("-6")
 			.Add("8-10")
 			.Add("15")
@@ -161,7 +162,7 @@ public class NumberRangesTest
 	[InlineData(30, true)]
 	public void Test_Scenario4(int number, bool expected)
 	{
-		var range = NumberRange.Create("-6", "8-10", "15", "19-23", "25-");
+		var range = new NumberRange("-6", "8-10", "15", "19-23", "25-");
 		range.Contains(number).Should().Be(expected);
 	}
 
